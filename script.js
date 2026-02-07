@@ -1,4 +1,4 @@
-// Typing effect
+// Typing effect in Hero section
 const typingText = ["HTML", "CSS", "JavaScript"];
 let index = 0;
 let charIndex = 0;
@@ -33,7 +33,7 @@ function type() {
 
 type();
 
-// Animate elements on scroll
+// Scroll animations for elements (fade-in / slide-up)
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -43,4 +43,5 @@ const observer = new IntersectionObserver(entries => {
   });
 }, {threshold:0.1});
 
+// Observe all animated elements
 document.querySelectorAll('.slide-up, .fade-up').forEach(el => observer.observe(el));
